@@ -64,6 +64,8 @@ class BookUpdateView(UpdateView):
 class BookDeleteView(DeleteView):
     model = Book
     success_url = '/books'
+    template_name = 'delete.html'
+    context_object_name = "book"
 
 
 class BookImportView(View):
